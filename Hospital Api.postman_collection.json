@@ -1,0 +1,637 @@
+{
+	"info": {
+		"_postman_id": "1327e365-3038-4e66-bba6-63305b0d6825",
+		"name": "Hospital Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16531409"
+	},
+	"item": [
+		{
+			"name": "Record",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/records",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"records"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get record by doctorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/records/doctor/79f124cc-6b31-44e8-919d-1a58b6b4e627",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"records",
+								"doctor",
+								"79f124cc-6b31-44e8-919d-1a58b6b4e627"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get records by userId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/records/patient/769d4ba6-ad4c-4ce3-a7cc-ecfc9bb53d51",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"records",
+								"patient",
+								"769d4ba6-ad4c-4ce3-a7cc-ecfc9bb53d51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/records?doctorId=79f124cc-6b31-44e8-919d-1a58b6b4e627&userId=725b0c01-2bcb-41ad-9a1b-0293aabff945&bookedTime=2022-07-25T6:00:00",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"records"
+							],
+							"query": [
+								{
+									"key": "doctorId",
+									"value": "79f124cc-6b31-44e8-919d-1a58b6b4e627"
+								},
+								{
+									"key": "userId",
+									"value": "725b0c01-2bcb-41ad-9a1b-0293aabff945"
+								},
+								{
+									"key": "bookedTime",
+									"value": "2022-07-25T6:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update record's bookedTime",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/records/8c747628-c515-4af5-644b-08da6c7c5c8a?bookedTime=2022.07.25 -10:00:00",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"records",
+								"8c747628-c515-4af5-644b-08da6c7c5c8a"
+							],
+							"query": [
+								{
+									"key": "bookedTime",
+									"value": "2022.07.25 -10:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Record by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/records/8c747628-c515-4af5-644b-08da6c7c5c8a",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"records",
+								"8c747628-c515-4af5-644b-08da6c7c5c8a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Schedule",
+			"item": [
+				{
+					"name": "Get shedules",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/doctors/shedules",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"doctors",
+								"shedules"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get doctor's schedule",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/doctors/0cb1338c-9330-416f-b833-c6cbb2198599/schedule",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"doctors",
+								"0cb1338c-9330-416f-b833-c6cbb2198599",
+								"schedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Schedule",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/doctors/shedules?doctorId=0cb1338c-9330-416f-b833-c6cbb2198599&dayOfWeek=6&beginWork=8:00&endWork=18:00",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"doctors",
+								"shedules"
+							],
+							"query": [
+								{
+									"key": "doctorId",
+									"value": "0cb1338c-9330-416f-b833-c6cbb2198599"
+								},
+								{
+									"key": "dayOfWeek",
+									"value": "6"
+								},
+								{
+									"key": "beginWork",
+									"value": "8:00"
+								},
+								{
+									"key": "endWork",
+									"value": "18:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Schedule",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/doctors/shedules?scheduleId=00965dfb-cdfa-4bac-a490-08da6bfc0f84&beginWork=9:00&endWork=20:30",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"doctors",
+								"shedules"
+							],
+							"query": [
+								{
+									"key": "scheduleId",
+									"value": "00965dfb-cdfa-4bac-a490-08da6bfc0f84"
+								},
+								{
+									"key": "beginWork",
+									"value": "9:00"
+								},
+								{
+									"key": "endWork",
+									"value": "20:30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Schedule",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/doctors/shedules/0cb1338c-9330-416f-b833-c6cbb2198599",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"doctors",
+								"shedules",
+								"0cb1338c-9330-416f-b833-c6cbb2198599"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Doctors",
+			"item": [
+				{
+					"name": "Get doctors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/doctors",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update profession",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/doctors/a752bd8b-0f94-49ab-957e-a46977675146?profession=ole",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"doctors",
+								"a752bd8b-0f94-49ab-957e-a46977675146"
+							],
+							"query": [
+								{
+									"key": "profession",
+									"value": "ole"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get doctor by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/doctors/a752bd8b-0f94-49ab-957e-a46977675146",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"doctors",
+								"a752bd8b-0f94-49ab-957e-a46977675146"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create doctor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/doctors/020febf6-5803-4429-8dd7-77483ad8ed7c?profession=proctologist",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"doctors",
+								"020febf6-5803-4429-8dd7-77483ad8ed7c"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "725b0c01-2bcb-41ad-9a1b-0293aabff945",
+									"disabled": true
+								},
+								{
+									"key": "profession",
+									"value": "proctologist"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete doctor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/doctors/020febf6-5803-4429-8dd7-77483ad8ed7c",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"doctors",
+								"020febf6-5803-4429-8dd7-77483ad8ed7c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/signup?email=andrei@b.com&password=andrei&name=Andrei&phoneNumber=380955523658&surname=Bilous",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"signup"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "andrei@b.com"
+								},
+								{
+									"key": "password",
+									"value": "andrei"
+								},
+								{
+									"key": "name",
+									"value": "Andrei"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "380955523658"
+								},
+								{
+									"key": "surname",
+									"value": "Bilous"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/signin?email=admin@gmail.com&password=admin1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"signin"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "admin1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/logout",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Give role",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove role",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/725b0c01-2bcb-41ad-9a1b-0293aabff945/role/Doctor/remove",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"725b0c01-2bcb-41ad-9a1b-0293aabff945",
+								"role",
+								"Doctor",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/users/roles",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"users",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

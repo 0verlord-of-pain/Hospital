@@ -70,31 +70,46 @@ namespace Hospital.Tests.RecordsTests
             var user = new List<User>
             {
                 _fixture.Build<User>()
+                    .Without(i=>i.Records)
                     .Create()
             };
 
             await _hospitalContextFixture.InitUsersAsync(user);
 
-            var patient = await _hospitalContextFixture.context.Users.FirstOrDefaultAsync();
+            var doctorInit = new List<Doctor>
+            {
+                _fixture.Build<Doctor>()
+                    .Without(i=>i.Records)
+                    .Without(i=>i.Schedules)
+                    .Create()
+            };
+            await _hospitalContextFixture.InitDoctorsAsync(doctorInit);
 
-            var record = patient.Records.FirstOrDefault();
+            var doctor = await _hospitalContextFixture.context.Doctors.FirstOrDefaultAsync(i => i.DoctorId.Equals(doctorInit.FirstOrDefault().DoctorId));
 
-            var oldRecordbookedTime = record.BookedTime;
+            var schedule = Schedule.Create(doctor, DayOfWeek.Monday, TimeSpan.Zero, TimeSpan.MaxValue);
 
-            var doctorSchedule = patient.Doctor.Schedules.FirstOrDefault();
+            doctor.UpdateSchedules(new List<Schedule> { schedule });
 
-            var dateTimeUtcNow = record.BookedTime;
+            await _hospitalContextFixture.context.SaveChangesAsync();
 
-            var dateTime = new DateTime(dateTimeUtcNow.Year, dateTimeUtcNow.Month, dateTimeUtcNow.Day,
-                doctorSchedule.BeginWork.Hours, doctorSchedule.BeginWork.Minutes, doctorSchedule.BeginWork.Seconds);
+            var recordTime = Next(DateTime.UtcNow, DayOfWeek.Monday);
+            _hospitalContextFixture.context.Records.Add(
+                Record.Create(user.FirstOrDefault(), doctor, recordTime));
 
-            var bookedTime = Next(dateTime, doctorSchedule.DayOfWeek);
+            await _hospitalContextFixture.context.SaveChangesAsync();
 
-            var result = await _iRecordCommand.UpdateBookedTimeAsync(record.RecordId, bookedTime);
+            var newBookedTime = Next(DateTime.UtcNow.AddMonths(3), DayOfWeek.Monday);
+
+            var record =
+                await _hospitalContextFixture.context.Records.FirstOrDefaultAsync(i =>
+                    i.DoctorId.Equals(doctor.DoctorId));
+
+            var result = await _iRecordCommand.UpdateBookedTimeAsync(record.RecordId, newBookedTime);
 
             result.Should().NotBeNull();
             result.RecordId.Should().Be(record.RecordId);
-            result.BookedTime.Should().NotBe(oldRecordbookedTime);
+            result.BookedTime.Should().BeAfter(recordTime);
         }
 
         [Fact]

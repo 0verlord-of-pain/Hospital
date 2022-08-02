@@ -161,7 +161,6 @@ namespace Hospital.Infrastructure.Seed
                     _context.Records.Add(
                         Record.Create(patient, doctor, recordTime));
 
-                    var a = await _context.Records.ToListAsync();
                     await _context.SaveChangesAsync();
                 }
             }

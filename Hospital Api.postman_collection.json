@@ -36,7 +36,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/users/records/doctor/79f124cc-6b31-44e8-919d-1a58b6b4e627",
+							"raw": "https://localhost:5001/api/users/records/doctor/a752bd8b-0f94-49ab-957e-a46977675146",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -47,7 +47,7 @@
 								"users",
 								"records",
 								"doctor",
-								"79f124cc-6b31-44e8-919d-1a58b6b4e627"
+								"a752bd8b-0f94-49ab-957e-a46977675146"
 							]
 						}
 					},
@@ -59,7 +59,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/users/records/patient/769d4ba6-ad4c-4ce3-a7cc-ecfc9bb53d51",
+							"raw": "https://localhost:5001/api/users/records/patient/1d8b87c2-cf7f-47e1-ac63-c299ce811c7a",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -70,7 +70,7 @@
 								"users",
 								"records",
 								"patient",
-								"769d4ba6-ad4c-4ce3-a7cc-ecfc9bb53d51"
+								"1d8b87c2-cf7f-47e1-ac63-c299ce811c7a"
 							]
 						}
 					},
@@ -82,7 +82,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/users/records?doctorId=79f124cc-6b31-44e8-919d-1a58b6b4e627&userId=725b0c01-2bcb-41ad-9a1b-0293aabff945&bookedTime=2022-07-25T6:00:00",
+							"raw": "https://localhost:5001/api/users/records?doctorId=a752bd8b-0f94-49ab-957e-a46977675146&userId=1d8b87c2-cf7f-47e1-ac63-c299ce811c7a&bookedTime=2022-08-03T16:00:00",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -96,15 +96,15 @@
 							"query": [
 								{
 									"key": "doctorId",
-									"value": "79f124cc-6b31-44e8-919d-1a58b6b4e627"
+									"value": "a752bd8b-0f94-49ab-957e-a46977675146"
 								},
 								{
 									"key": "userId",
-									"value": "725b0c01-2bcb-41ad-9a1b-0293aabff945"
+									"value": "1d8b87c2-cf7f-47e1-ac63-c299ce811c7a"
 								},
 								{
 									"key": "bookedTime",
-									"value": "2022-07-25T6:00:00"
+									"value": "2022-08-03T16:00:00"
 								}
 							]
 						}
@@ -117,7 +117,7 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/users/records/8c747628-c515-4af5-644b-08da6c7c5c8a?bookedTime=2022.07.25 -10:00:00",
+							"raw": "https://localhost:5001/api/users/records/407cca81-46ff-4a9e-78cb-08da74a11eb1?bookedTime=2022-08-03T18:00:00",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -127,12 +127,12 @@
 								"api",
 								"users",
 								"records",
-								"8c747628-c515-4af5-644b-08da6c7c5c8a"
+								"407cca81-46ff-4a9e-78cb-08da74a11eb1"
 							],
 							"query": [
 								{
 									"key": "bookedTime",
-									"value": "2022.07.25 -10:00:00"
+									"value": "2022-08-03T18:00:00"
 								}
 							]
 						}
@@ -145,7 +145,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/users/records/8c747628-c515-4af5-644b-08da6c7c5c8a",
+							"raw": "https://localhost:5001/api/users/records/407cca81-46ff-4a9e-78cb-08da74a11eb1",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -155,7 +155,7 @@
 								"api",
 								"users",
 								"records",
-								"8c747628-c515-4af5-644b-08da6c7c5c8a"
+								"407cca81-46ff-4a9e-78cb-08da74a11eb1"
 							]
 						}
 					},
@@ -194,7 +194,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/users/doctors/0cb1338c-9330-416f-b833-c6cbb2198599/schedule",
+							"raw": "https://localhost:5001/api/users/doctors/shedules/a752bd8b-0f94-49ab-957e-a46977675146",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -204,8 +204,8 @@
 								"api",
 								"users",
 								"doctors",
-								"0cb1338c-9330-416f-b833-c6cbb2198599",
-								"schedule"
+								"shedules",
+								"a752bd8b-0f94-49ab-957e-a46977675146"
 							]
 						}
 					},
@@ -217,7 +217,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/users/doctors/shedules?doctorId=0cb1338c-9330-416f-b833-c6cbb2198599&dayOfWeek=6&beginWork=8:00&endWork=18:00",
+							"raw": "https://localhost:5001/api/users/doctors/shedules?doctorId=a752bd8b-0f94-49ab-957e-a46977675146&dayOfWeek=6&beginWork=8:00&endWork=18:00",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -232,7 +232,7 @@
 							"query": [
 								{
 									"key": "doctorId",
-									"value": "0cb1338c-9330-416f-b833-c6cbb2198599"
+									"value": "a752bd8b-0f94-49ab-957e-a46977675146"
 								},
 								{
 									"key": "dayOfWeek",
@@ -257,7 +257,7 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/users/doctors/shedules?scheduleId=00965dfb-cdfa-4bac-a490-08da6bfc0f84&beginWork=9:00&endWork=20:30",
+							"raw": "https://localhost:5001/api/users/doctors/shedules/a5da479e-1d12-4c78-8450-08da74a07704?beginWork=6:00&endWork=20:30",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -267,16 +267,13 @@
 								"api",
 								"users",
 								"doctors",
-								"shedules"
+								"shedules",
+								"a5da479e-1d12-4c78-8450-08da74a07704"
 							],
 							"query": [
 								{
-									"key": "scheduleId",
-									"value": "00965dfb-cdfa-4bac-a490-08da6bfc0f84"
-								},
-								{
 									"key": "beginWork",
-									"value": "9:00"
+									"value": "6:00"
 								},
 								{
 									"key": "endWork",
@@ -293,7 +290,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/users/doctors/shedules/0cb1338c-9330-416f-b833-c6cbb2198599",
+							"raw": "https://localhost:5001/api/users/doctors/shedules/a5da479e-1d12-4c78-8450-08da74a07704",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -304,7 +301,7 @@
 								"users",
 								"doctors",
 								"shedules",
-								"0cb1338c-9330-416f-b833-c6cbb2198599"
+								"a5da479e-1d12-4c78-8450-08da74a07704"
 							]
 						}
 					},
@@ -472,7 +469,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/users/signup?email=andrei@b.com&password=andrei&name=Andrei&phoneNumber=380955523658&surname=Bilous",
+							"raw": "https://localhost:5001/api/users/signup?email=andrei1@b.com&password=andrei1&name=Andrei&phoneNumber=380955523658&surname=Bilous",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -486,11 +483,11 @@
 							"query": [
 								{
 									"key": "email",
-									"value": "andrei@b.com"
+									"value": "andrei1@b.com"
 								},
 								{
 									"key": "password",
-									"value": "andrei"
+									"value": "andrei1"
 								},
 								{
 									"key": "name",
@@ -572,7 +569,7 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/users",
+							"raw": "https://localhost:5001/api/users/725b0c01-2bcb-41ad-9a1b-0293aabff945/role/Doctor/attach",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -580,7 +577,11 @@
 							"port": "5001",
 							"path": [
 								"api",
-								"users"
+								"users",
+								"725b0c01-2bcb-41ad-9a1b-0293aabff945",
+								"role",
+								"Doctor",
+								"attach"
 							]
 						}
 					},

@@ -233,16 +233,11 @@ _Pvt_Extensions
 /terraform/deploy/.terraform/
 /terraform/deploy/.terraform.lock.hcl
 /terraform/state/.terraform/
-/Radar.Identity/.idea/
 /.idea/
 /terraform/deploy/source/
-/Radar.Identity/tempkey.rsa
 
 # dependencies
 */node_modules
 
 # vscode
 .vscode/*
-/Radar.Identity/package-lock.json
-/Radar.Identity/gulpfile.js
-/Radar.Identity/package.json

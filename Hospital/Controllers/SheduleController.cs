@@ -30,6 +30,14 @@ namespace Hospital.Controllers
             return Ok(result);
         }
 
+        [HttpGet("{doctorId}")]
+        [AllowAnonymous]
+        public IActionResult GetByDoctorId([FromRoute] Guid doctorId)
+        {
+            var result = _iScheduleQuery.GetByDoctorId(doctorId);
+            return Ok(result);
+        }
+
         [HttpPost]
         [Authorize(Policy = Policies.AdminOrManager)]
         public async Task<IActionResult> CreateAsync(

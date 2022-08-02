@@ -4,7 +4,6 @@ using AutoFixture;
 using AutoMapper;
 using FluentAssertions;
 using Hospital.Application.CQRS.Schedules.Schedule.Queries;
-using Hospital.Application.CQRS.Schedules.Views;
 using Hospital.Domain;
 using Moq;
 using Xunit;

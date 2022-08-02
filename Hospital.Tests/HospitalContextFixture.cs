@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Hospital.Domain;
 using Hospital.Storage.Persistence;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hospital.Tests
@@ -25,12 +24,6 @@ namespace Hospital.Tests
         public async Task InitUsersAsync(IEnumerable<User> users)
         {
             context.Users.AddRange(users);
-            await context.SaveChangesAsync();
-        }
-
-        public async Task InitRolesAsync(IEnumerable<IdentityRole> roles)
-        {
-            context.Roles.AddRange(roles);
             await context.SaveChangesAsync();
         }
 
